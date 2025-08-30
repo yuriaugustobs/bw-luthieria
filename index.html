@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BW Luthieria - Manutenção, customização e aulas de guitarra</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <meta name="description" content="BW Luthieria - Do básico ao avançado. Aulas individuais online e presenciais. Manutenção e customização de guitarras.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="BW Luthieria - Professor de Guitarra">
+    <meta property="og:description" content="Aulas de guitarra do básico ao avançado. Manutenção e customização de instrumentos.">
+    <meta property="og:image" content="Screenshot_3.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="BW Luthieria - Professor de Guitarra">
+    <meta property="twitter:description" content="Aulas de guitarra do básico ao avançado. Manutenção e customização de instrumentos.">
+    <meta property="twitter:image" content="Screenshot_3.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark min-h-screen transition-all duration-500 bg-gradient-to-br from-gray-950 via-black to-slate-900 dark:from-gray-950 dark:via-black dark:to-slate-900 light:from-gray-50 light:via-white light:to-gray-100">
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 opacity-5">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-700 animate-pulse-slow"></div>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="fixed top-6 right-6 z-50 p-3 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:rotate-180">
+        <i id="themeIcon" class="fas fa-moon text-white text-lg"></i>
+    </button>
+    
+    <!-- Main Container -->
+    <div class="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-lg md:max-w-xl lg:max-w-2xl">
+            <!-- Glass Card -->
+            <div class="backdrop-blur-xl bg-white/10 dark:bg-white/5 light:bg-black/5 rounded-3xl border border-white/20 shadow-2xl p-6 md:p-8">
+                
+                <!-- Profile Section -->
+                <div class="text-center mb-6">
+                    <!-- Profile Picture -->
+                    <div class="relative inline-block mb-3">
+                        <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-r from-slate-600 to-slate-800 p-1">
+                            <img src="Screenshot_3.png" 
+                                 alt="Brends Wallace - Professor de Guitarra e Luthier da BW Luthieria" 
+                                 class="w-full h-full rounded-full object-cover border-2 border-white/20">
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                    </div>
+                    
+                    <!-- Username -->
+                    <h1 class="text-xl md:text-2xl font-bold text-white dark:text-white light:text-gray-800 mb-2">@brendswallace</h1>
+                    <p class="text-gray-300 dark:text-gray-300 light:text-gray-600 text-sm font-medium">BW Luthieria</p>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-500 text-xs mt-1">Professor de Guitarra • Luthier • Do básico ao avançado</p>
+                </div>
+                
+                <!-- Links Container -->
+                <div class="space-y-3">
+                    
+                    <!-- Agendar Aula -->
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma aula de introdução à guitarra." 
+                       target="_blank" 
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fab fa-whatsapp text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">Agendar Aula de Introdução</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- Dicas de Guitarra -->
+                    <a href="https://www.youtube.com/@brendswallace/videos" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fas fa-guitar text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">Dicas de Técnicas na Guitarra</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5511999999999" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fab fa-whatsapp text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">WhatsApp</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- YouTube -->
+                    <a href="https://youtube.com/@brendswallace" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fab fa-youtube text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">YouTube</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/brendswallace" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fab fa-instagram text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">Instagram</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/brendswallace" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fab fa-twitter text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">Twitter</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="https://facebook.com/brendswallace" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fab fa-facebook text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">Facebook</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                    <!-- Projeto Unidade Popular -->
+                    <a href="https://www.instagram.com/unidadepopular/" 
+                       target="_blank"
+                       class="group flex items-center justify-center w-full p-3 rounded-2xl backdrop-blur-md bg-gradient-to-r from-slate-600/20 to-slate-700/20 border border-slate-500/30 hover:from-slate-600/30 hover:to-slate-700/30 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25">
+                        <i class="fas fa-users text-slate-400 text-lg mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-white font-medium group-hover:text-slate-300 transition-colors duration-300 text-sm md:text-base">Projeto Unidade Popular</span>
+                        <i class="fas fa-external-link-alt text-slate-400 text-xs ml-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Particles -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-slate-400 rounded-full animate-ping opacity-20"></div>
+        <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-slate-500 rounded-full animate-pulse opacity-30"></div>
+        <div class="absolute bottom-1/4 left-3/4 w-3 h-3 bg-slate-600 rounded-full animate-bounce opacity-10"></div>
+    </div>
+</body>
+</html>

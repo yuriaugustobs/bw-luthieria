@@ -1,0 +1,299 @@
+/* Custom Glassmorphism and Enhanced Effects */
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible for better accessibility */
+*:focus-visible {
+    outline: 2px solid #475569;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .backdrop-blur-xl {
+        background: rgba(0, 0, 0, 0.8) !important;
+        border: 2px solid #ffffff !important;
+    }
+}
+
+/* Enhanced Glassmorphism Effect */
+.backdrop-blur-xl {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #475569, #64748b);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #334155, #475569);
+    background-clip: content-box;
+}
+
+/* Enhanced Button Hover Effects */
+a {
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+a:hover::before {
+    left: 100%;
+}
+
+/* Profile Picture Glow Effect */
+.w-24.h-24.rounded-full {
+    position: relative;
+}
+
+.w-24.h-24.rounded-full::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #475569, #64748b);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Glass Card Effect */
+.backdrop-blur-xl.bg-white\/10 {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme Adjustments */
+.light .backdrop-blur-xl.bg-white\/10 {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Link Hover Effects Enhancement */
+a[href] {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a[href]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Animations */
+a i {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover i:first-child {
+    transform: scale(1.2) rotate(5deg);
+}
+
+a:hover i:last-child {
+    transform: translateX(5px);
+}
+
+/* Gradient Text Effect */
+h1 {
+    background: linear-gradient(135deg, #475569, #64748b, #334155);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Theme Toggle Button Enhancement */
+#themeToggle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#themeToggle:hover {
+    box-shadow: 0 0 20px rgba(71, 85, 105, 0.3);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .backdrop-blur-xl.bg-white\/10 {
+        margin: 1rem;
+        padding: 1.5rem;
+        max-width: calc(100vw - 2rem);
+    }
+    
+    a[href] {
+        padding: 0.75rem 1rem;
+    }
+    
+    h1 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Custom Ripple Effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Floating Animation Enhancement */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% { 
+        transform: translateY(-10px) rotate(1deg);
+    }
+    50% { 
+        transform: translateY(-5px) rotate(0deg);
+    }
+    75% { 
+        transform: translateY(-15px) rotate(-1deg);
+    }
+}
+
+/* Removed animate-float class to disable floating animation for main card */
+
+/* Custom Focus Styles */
+a:focus {
+    outline: 2px solid #475569;
+    outline-offset: 2px;
+}
+
+button:focus {
+    outline: 2px solid #475569;
+    outline-offset: 2px;
+}
+
+/* Enhanced Particle Effects */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particleFloat 4s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.7;
+    }
+}
+
+/* Link Category Colors */
+.link-whatsapp { --link-color: #25d366; }
+.link-youtube { --link-color: #ff0000; }
+.link-instagram { --link-color: #e4405f; }
+.link-twitter { --link-color: #1da1f2; }
+.link-facebook { --link-color: #1877f2; }
+.link-project { --link-color: #8b5cf6; }
+.link-guitar { --link-color: #f59e0b; }
+
+/* Status Indicator Animation */
+.status-online {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
